@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStore</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            margin: 0;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8); 
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            position: relative;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #ff3f6c;
+            left: 50%;
+            bottom: -5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.vectorstock.com/i/500p/57/56/template-banner-for-online-store-with-shopping-vector-42935756.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 60px;
+        }
+
+        .banner h2 {
+            font-size: 54px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .banner a {
+            display: inline-block;
+            background-color: #ff3f6c;
+            color: white;
+            padding: 20px 50px;
+            font-size: 26px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .banner a:hover {
+            background-color: #e4355f;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: -10px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 20px 10px;
+            }
+
+            .banner h2 {
+                font-size: 40px;
+            }
+
+            .banner a {
+                font-size: 22px;
+                padding: 15px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MyStore</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="products.html">Products</a>
+            <a href="#">Cart <span id="cart-count">0</span></a>
+            <a href="#">Checkout</a>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <h2>Welcome to MyStore</h2>
+        <a href="products.html" class="products-button">View Products</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MyStore. All rights reserved.</p>
+    </footer>
+</body>
+</html>
